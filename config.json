@@ -1,0 +1,10 @@
+{
+  "kubernetesNamespace": "default",
+  "services": {
+    "discord": ""
+  },
+  "events": {
+    "podAdd": true,
+    "podDelete": true
+  }
+}

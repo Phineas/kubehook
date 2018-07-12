@@ -26,19 +26,19 @@ type Field struct {
 }
 
 type Embed struct {
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	URL         string    `json:"url"`
-	Timestamp   string    `json:"timestamp"`
-	Color       int       `json:"color"`
-	Footer      Footer    `json:"footer"`
-	Image       Image     `json:"image"`
-	Thumbnail   Thumbnail `json:"thumbnail"`
-	Author      Author    `json:"author"`
-	Fields      []Field   `json:"fields"`
+	Title       string    `json:"title",omitempty`
+	Description string    `json:"description",omitempty`
+	URL         string    `json:"url",omitempty`
+	Timestamp   string    `json:"timestamp",omitempty`
+	Color       int       `json:"color",omitempty`
+	Footer      Footer    `json:"footer",omitempty`
+	Image       Image     `json:"image",omitempty`
+	Thumbnail   Thumbnail `json:"thumbnail",omitempty`
+	Author      Author    `json:"author",omitempty`
+	Fields      []Field   `json:"fields",omitempty`
 }
 
 type Message struct {
 	Content string  `json:"content"`
-	Embeds  []Embed `json:"embeds"`
+	Embeds  []Embed `json:"embeds",omitempty`
 }
